@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Starting a Master of Science in Computer Science and Engineering at University of California, San Diego 🔱
+Starting a Master of Science in Computer Science and Engineering at UCSD 🔱
