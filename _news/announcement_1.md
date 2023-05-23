@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2023-05-06 01:20:00+0900
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Launching my own website 🥳
