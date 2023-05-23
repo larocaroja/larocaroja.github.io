@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I started my Masters at University of California, San Diego 🔱
+Starting a Master of Science in Computer Science and Engineering at University of California, San Diego 🔱
