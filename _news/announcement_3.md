@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-09-25 09:59:00-0700
+date: 2016-01-15 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Starting a Master of Science in Computer Science and Engineering at UCSD 🔱
+A simple inline announcement with Markdown emoji! :sparkles: :smile:
