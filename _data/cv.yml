@@ -36,7 +36,12 @@
       institution: Deeply Inc.
       year: 2020 - 2023
       description:
-        - Designed and develoepd sound event classification systems, working with <a href = "https://www.linkedin.com/in/myeonghoon-ryu-319b1b12a/">Myeonghoon Ryu</a>.
+        - Develoepd sound event classification systems (e.g. <a href = "https://deeplyinc.com/demo/">Demo</a>), working with <a href = "https://www.linkedin.com/in/myeonghoon-ryu-319b1b12a/">Myeonghoon Ryu</a>.
+    - title: Data Scientist Intern
+      institution: Deeply Inc.
+      year: 2020 - 2020
+      description:
+        - Designed and executed data collection protocols for government-funded AI data construction projects [<a href = "https://github.com/deeplyinc/Nonverbal-Vocalization-Dataset">Link 1</a>, <a href = "https://github.com/deeplyinc/Parent-Child-Vocal-Interaction-Dataset">2</a>, <a href = "https://github.com/deeplyinc/Korean-Read-Speech-Corpus">3</a>]
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
@@ -55,30 +60,30 @@
 #       year: 2015-now
 #       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+# - title: Honors and Awards
+#   type: time_table
+#   contents:
+#     - year: 1921
+#       items: 
+#         - Nobel Prize in Physics 
+#         - Matteucci Medal
+#     - year: 2029
+#       items: 
+#         - Max Planck Medal
 
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+# - title: Academic Interests
+#   type: nested_list
+#   contents:
+#     - title: Topic 1.
+#       items: 
+#         - Description 1.
+#         - Description 2.
+#     - title: Topic 2.
+#       items:
+#         - Description 1.
+#         - Description 2.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
