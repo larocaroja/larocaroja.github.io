@@ -1,15 +1,17 @@
 ---
-layout: distill
-title: a distill-style blog post
-description: an example of a distill-style blog post and main elements
+layout: post
+title:  First 
+date:   2023-12-24 12:08:00
+description: march & april, looking forward to summer
+tags: deep-learning audio-event-classification research
+categories: research
 giscus_comments: true
-date: 2021-05-22
 
 authors:
-  - name: Albert Einstein
+  - name: Hongseok Oh
     url: "https://en.wikipedia.org/wiki/Albert_Einstein"
     affiliations:
-      name: IAS, Princeton
+      name: University of Calfironia, San Diego, Department of
   - name: Boris Podolsky
     url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
     affiliations:
