@@ -3,7 +3,7 @@ layout: distill
 title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
 description: march & april, looking forward to summer
 giscus_comments: true
-date: 2023-12-25 12:08:00
+date: 2023-12-25 00:08:00
 # tags: deep-learning audio-event-classification research
 # categories: research
 # featured: true
