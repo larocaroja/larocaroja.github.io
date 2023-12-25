@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 
-date:   2023-12-25 12:08:00
+title: [Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification
+date: 2023-12-25 12:08:00
 description: march & april, looking forward to summer
 tags: deep-learning audio-event-classification research
 categories: research
