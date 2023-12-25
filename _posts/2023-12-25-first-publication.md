@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
+# title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
+title: abcd
 date: 2023-12-25 12:08:00
 description: march & april, looking forward to summer
 tags: deep-learning audio-event-classification research
@@ -10,7 +11,6 @@ featured: true
 
 authors:
   - name: Hongseok Oh
-    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
     affiliations:
       name: University of Calfironia, San Diego, Department of
 
