@@ -1,13 +1,12 @@
 ---
 layout: post
-# title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
-title: abcd
+title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
 date: 2023-12-25 12:08:00
 description: march & april, looking forward to summer
 tags: deep-learning audio-event-classification research
 categories: research
 giscus_comments: true
-featured: true
+# featured: true
 
 authors:
   - name: Hongseok Oh
