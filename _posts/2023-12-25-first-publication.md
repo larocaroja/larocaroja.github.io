@@ -4,14 +4,14 @@ title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound
 description: march & april, looking forward to summer
 giscus_comments: true
 date: 2023-12-25 00:08:00
-# tags: deep-learning audio-event-classification research
-# categories: research
-# featured: true
+tags: deep-learning audio-event-classification research
+categories: research
+featured: true
 
 authors:
   - name: Hongseok Oh
     affiliations:
-      name: University of Calfironia, San Diego, Department of
+      name: University of Calfironia, San Diego
 
 bibliography: 2023-12-25-first-publication.bib
 
