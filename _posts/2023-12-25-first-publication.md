@@ -17,19 +17,19 @@ bibliography: 2023-12-25-first-publication.bib
 
 toc:
   - name: Exploring the World of Sound Recognition
-    # - name: Introduction to Sound Event Classification and the Challenge of Device Variability
-    # - name: Our Innovative Approach to Enhance Reliability
+      - name: Introduction to Sound Event Classification and the Challenge of Device Variability
+      - name: Our Innovative Approach to Enhance Reliability
   - name: Our Innovative Approach to Enhance Reliability
-    # - name: How We Created a Unique Sound Dataset
-    # - name: Simplifying Our Method for Better Sound Recognition
+      - name: How We Created a Unique Sound Dataset
+      - name: Simplifying Our Method for Better Sound Recognition
   - name: "Breaking New Ground: Testing and Results"
-    # - name: "Comparative Analysis: Our Method vs. Traditional Approaches"
-    # - name: Implications and Impact of Our Findings
+      - name: "Comparative Analysis: Our Method vs. Traditional Approaches"
+      - name: Implications and Impact of Our Findings
   - name: "Looking Ahead: The Future of Sound Event Classification"
-    # - name: Summarizing Our Contributions
-    # - name: Future Directions and Potential Applications
+      - name: Summarizing Our Contributions
+      - name: Future Directions and Potential Applications
   - name: Further Insights and References
-    # - name: Additional Resources for Enthusiasts and Researchers
+      - name: Additional Resources for Enthusiasts and Researchers
 ---
 
 ## Exploring the World of Sound Recognition
