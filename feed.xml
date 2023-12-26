@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-26T09:18:56+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-</subtitle><entry><title type="html"></title><link href="https://larocaroja.github.io/blog/2023/2023-12-25-first-publication/" rel="alternate" type="text/html" title="" /><published>2023-12-26T09:18:56+00:00</published><updated>2023-12-26T09:18:56+00:00</updated><id>https://larocaroja.github.io/blog/2023/2023-12-25-first-publication</id><content type="html" xml:base="https://larocaroja.github.io/blog/2023/2023-12-25-first-publication/"><![CDATA[<h2 id="exploring-the-world-of-sound-recognition">Exploring the World of Sound Recognition</h2>
-<h3 id="introduction-to-sound-event-classification-and-the-challenge-of-device-variability">Introduction to Sound Event Classification and the Challenge of Device Variability</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-26T09:26:26+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Microphone Conversion: Mitigating Device Variability in Sound Event Classification</title><link href="https://larocaroja.github.io/blog/2023/first-publication/" rel="alternate" type="text/html" title="Microphone Conversion: Mitigating Device Variability in Sound Event Classification" /><published>2023-12-25T00:08:00+00:00</published><updated>2023-12-25T00:08:00+00:00</updated><id>https://larocaroja.github.io/blog/2023/first-publication</id><content type="html" xml:base="https://larocaroja.github.io/blog/2023/first-publication/"><![CDATA[<h2 id="exploring-the-world-of-sound-recognition">Exploring the World of Sound Recognition</h2>
+<h3 id="sound-event-classification-and-the-challenge-of-device-variability">Sound Event Classification and the Challenge of Device Variability</h3>
 <p>This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/">MathJax 3</a> engine.
 You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>, like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>.
 If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).</p>
@@ -15,7 +15,7 @@ Here is an example:</p>
 
 <hr />
 
-<h2 id="our-innovative-approach-to-enhance-reliability-1">Our Innovative Approach to Enhance Reliability</h2>
+<h2 id="the-core-of-our-research-developing-a-new-technique-and-dataset">The Core of Our Research: Developing a New Technique and Dataset</h2>
 <h3 id="how-we-created-a-unique-sound-dataset">How We Created a Unique Sound Dataset</h3>
 <p>Citations are then used in the article body with the <code class="language-plaintext highlighter-rouge">&lt;d-cite&gt;</code> tag.
 The key attribute is a reference to the id provided in the bibliography.
@@ -54,7 +54,7 @@ You can always use the default code-highlight using the <code class="language-pl
 <h3 id="implications-and-impact-of-our-findings">Implications and Impact of Our Findings</h3>
 <hr />
 
-<h2 id="looking-ahead-the-future-of-sound-event-classification">Looking Ahead: The Future of Sound Event Classification</h2>
+<h2 id="the-future-of-sound-event-classification">The Future of Sound Event Classification</h2>
 <h3 id="summarizing-our-contributions">Summarizing Our Contributions</h3>
 <p>You can add interative plots using plotly + iframes :framed_picture:</p>
 
@@ -92,4 +92,4 @@ To generate the plot that you see above, you can use the following code snippet:
 
 <details><summary>Click here to know more</summary>
 <p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p>
-</details>]]></content><author><name></name></author></entry></feed>
+</details>]]></content><author><name>Hongseok Oh</name></author><category term="research" /><category term="deep-learning" /><category term="generative-AI" /><category term="research" /><category term="audio-event-classification" /><summary type="html"><![CDATA[A generative method to tackle domain mismatch problem in sound event classifcation systems]]></summary></entry></feed>
