@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: "[Research] Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
+title: "Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
 description: A generative method to tackle domain mismatch problem in sound event classifcation systems
 giscus_comments: true
 date: 2023-12-25 00:08:00
