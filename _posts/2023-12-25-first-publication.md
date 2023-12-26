@@ -39,6 +39,8 @@ Sound Event Classification (SEC) is a fascinating area of technology that aims t
 
 <div class="fake-img l-body">
   <p>{% include figure.html path="assets/img/apple-sound-recognition.png" %}</p>
+  <div class="caption">
+    Apple's Sound Recognition <https://www.youtube.com/watch?v=Db9Xsw5Aa5w>
 </div>
 
 ### Our Innovative Approach to Enhance Reliability
