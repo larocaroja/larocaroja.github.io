@@ -4,7 +4,7 @@ title: "Microphone Conversion: Mitigating Device Variability in Sound Event Clas
 description: A generative method to tackle domain mismatch problem in sound event classifcation systems
 giscus_comments: true
 date: 2023-12-25 00:08:00
-tags: deep-learning audio-event-classification research
+tags: deep-learning generative-AI research audio-event-classification
 categories: research
 featured: true
 
