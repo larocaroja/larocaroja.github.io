@@ -17,23 +17,23 @@ bibliography: 2023-12-25-first-publication.bib
 
 toc:
   - name: Exploring the World of Sound Recognition
-      - name: Introduction to Sound Event Classification and the Challenge of Device Variability
-      - name: Our Innovative Approach to Enhance Reliability
-  - name: Our Innovative Approach to Enhance Reliability
-      - name: How We Created a Unique Sound Dataset
-      - name: Simplifying Our Method for Better Sound Recognition
+      # - name: Sound Event Classification and the Challenge of Device Variability
+      # - name: Our Innovative Approach to Enhance Reliability
+  - name: "The Core of Our Research: Developing a New Technique and Dataset"
+      # - name: How We Created a Unique Sound Dataset
+      # - name: Simplifying Our Method for Better Sound Recognition
   - name: "Breaking New Ground: Testing and Results"
-      - name: "Comparative Analysis: Our Method vs. Traditional Approaches"
-      - name: Implications and Impact of Our Findings
-  - name: "Looking Ahead: The Future of Sound Event Classification"
-      - name: Summarizing Our Contributions
-      - name: Future Directions and Potential Applications
-  - name: Further Insights and References
-      - name: Additional Resources for Enthusiasts and Researchers
+      # - name: "Comparative Analysis: Our Method vs. Traditional Approaches"
+      # - name: Implications and Impact of Our Findings
+  - name: "The Future of Sound Event Classification"
+      # - name: Summarizing Our Contributions
+      # - name: Future Directions and Potential Applications
+  - name: The Further Insights and References
+      # - name: Additional Resources for Enthusiasts and Researchers
 ---
 
 ## Exploring the World of Sound Recognition
-### Introduction to Sound Event Classification and the Challenge of Device Variability
+### Sound Event Classification and the Challenge of Device Variability
 This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
 You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
 If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
@@ -50,7 +50,7 @@ Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en
 
 ***
 
-## Our Innovative Approach to Enhance Reliability
+## The Core of Our Research: Developing a New Technique and Dataset
 ### How We Created a Unique Sound Dataset
 Citations are then used in the article body with the `<d-cite>` tag.
 The key attribute is a reference to the id provided in the bibliography.
@@ -90,7 +90,7 @@ function(x) {
 ### Implications and Impact of Our Findings
 ***
 
-## Looking Ahead: The Future of Sound Event Classification
+## The Future of Sound Event Classification
 ### Summarizing Our Contributions
 You can add interative plots using plotly + iframes :framed_picture:
 
