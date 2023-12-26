@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our work on robust sound event classification using generative AI was accepted to [ICASSP 2024](https://2024.ieeeicassp.org)!
+Our work on robust sound event classification using CycleGAN was accepted to [ICASSP 2024](https://2024.ieeeicassp.org)!

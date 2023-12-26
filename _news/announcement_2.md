@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Starting a Master of Science in Computer Science and Engineering at UCSD 🔱
+I am starting a Master of Science in Computer Science and Engineering at UCSD 🔱
