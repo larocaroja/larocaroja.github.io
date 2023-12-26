@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I officially finished the first quarter at UCSD. I'm so proud to get off on the right foot! 👣
+I officially finished the first quarter at UCSD. I am so proud to get off on the right foot! 👣
