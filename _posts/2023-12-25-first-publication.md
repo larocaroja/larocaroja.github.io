@@ -7,6 +7,7 @@ date: 2023-12-25 00:08:00
 tags: deep-learning generative-AI research audio-event-classification
 categories: research
 featured: true
+# img:m 
 
 authors:
   - name: Hongseok Oh
@@ -34,20 +35,14 @@ toc:
 
 ## Exploring the World of Sound Recognition
 ### Sound Event Classification and the Challenge of Device Variability
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
-You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
-If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
+Sound Event Classification (SEC) is a fascinating area of technology that aims to identify different types of sounds, like speech, music, and environmental noises, using advanced signal processing and machine learning techniques. Sound Event Classification (SEC) powers popular technologies like Apple’s Sound Recognition, Amazon's Alexa, and Google Home, enabling them to identify sounds from speech to environmental noises. Despite its broad applications, SEC faces challenges, particularly when audio is recorded on different devices, leading to performance issues. These variations, often imperceptible to human ears, can drastically affect the performance of SEC systems.
 
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
-Here is an example:
+<div class="fake-img l-body">
+  <p>{% include figure.html path="assets/img/apple-sound-recognition.png" %}</p>
+</div>
 
-$$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-$$
-
-Note that MathJax 3 is [a major re-write of MathJax](https://docs.mathjax.org/en/latest/upgrading/whats-new-3.0.html) that brought a significant improvement to the loading and rendering speed, which is now [on par with KaTeX](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
 ### Our Innovative Approach to Enhance Reliability
-
+Traditional solutions, such as data augmentation, have been limited, often relying on synthetic data which doesn’t fully capture real-world complexities. Furthermore, most initiatives, including those like [the DCASE Challenge](https://dcase.community), have their limitations, primarily due to their reliance on synthetic evaluation data. This limitation raises questions about the thoroughness and real-world applicability of their evaluations. Recognizing these challenges, our research addresses these challenges, aiming to enhance SEC systems for more accurate and reliable use in everyday technologies.
 ***
 
 ## The Core of Our Research: Developing a New Technique and Dataset
