@@ -28,7 +28,7 @@ toc:
   - name: "The Future of Sound Event Classification"
       - name: Summarizing Our Contributions
       - name: Future Directions and Potential Applications
-  - name: The Further Insights and References
+  - name: Further Insights and References
       - name: Additional Resources for Enthusiasts and Researchers
 ---
 
