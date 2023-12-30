@@ -1,7 +1,43 @@
-@article{gregor2015draw,
-  title={DRAW: A recurrent neural network for image generation},
-  author={Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
-  journal={arXiv preprint, arXiv:1502.04623},
-  year={2015},
-  url={https://arxiv.org/pdf/1502.04623.pdf}
+@inproceedings{zhu2017unpaired,
+  title={Unpaired image-to-image translation using cycle-consistent adversarial networks},
+  author={Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={2223--2232},
+  year={2017}
+}
+
+@techreport{Schmid2022,
+  title = {CP-JKU Submission to Dcase22: Distilling Knowledge for Low-Complexity Convolutional Neural Networks From a Patchout Audio Transformer},
+  author = {Schmid, Florian and Masoudian, Shahed and Koutini, Khaled and Widmer, Gerhard},
+  booktitle = {DCASE2022 Challenge},
+  year = {2022},
+  month = {June},
+  abstract = {In this technical report, we describe the CP-JKU team’s submission for Task 1 Low-Complexity Acoustic Scene Classification of the DCASE 22 challenge [1]. We use Knowledge Distillation to teach low-complexity CNN student models from Patchout Spectrogram Transformer (PaSST) models. We use the pre-trained PaSST models on Audioset and fine-tune them on the TAU Urban Acoustic Scenes 2022 Mobile development dataset. We experiment with using an ensemble of teachers, different receptive fields of the student models, and mixing frequency-wise statistics of spectrograms to enhance generalization to unseen devices. Finally, the student models are quantized in order to perform inference computations using 8 bit integers, simulating the low-complexity constraints of edge devices.}
+}
+
+@techreport{Kim2021b,
+  author = "Kim, Byeonggeun and Yang, Seunghan and Kim, Jangho and Chang, Simyung",
+  title = "QTI Submission to DCASE 2021: Residual Normalization for Device-Imbalanced Acoustic Scene Classification with Efficient Design",
+  booktitle = "DCASE2021 Challenge",
+  year = "2021",
+  month = "June",
+  abstract = "This technical report describes the details of our TASK1A submission of the DCASE2021 challenge. The goal of the task is to design an audio scene classification system for device-imbalanced datasets under the constraints of model complexity. This report introduces four methods to achieve the goal. First, we propose Residual Normalization, a novel feature normalization method that uses instance normalization with a shortcut path to discard unnecessary device- specific information without losing useful information for classification. Second, we design an efficient architecture, BC-ResNet- Mod, a modified version of the baseline architecture with a limited receptive field. Third, we exploit spectrogram-to-spectrogram translation from one to multiple devices to augment training data. Finally, we utilize three model compression schemes: pruning, quantization, and knowledge distillation to reduce model complexity. The proposed system achieves an average test accuracy of 76.3\% in TAU Urban Acoustic Scenes 2020 Mobile, development dataset with 315k parameters, and average test accuracy of 75.3\% after compression to 62kB of non-zero parameters."
+}
+
+@inproceedings{kim22_interspeech,
+  title={Domain Generalization with Relaxed Instance Frequency-wise Normalization for Multi-device Acoustic Scene Classification},
+  author={Byeonggeun Kim and Seunghan Yang and Jangho Kim and Hyunsin Park and Juntae Lee and Simyung Chang},
+  booktitle={Proc. Interspeech 2022},
+  pages={2393--2397},
+  year={2022},
+  doi={10.21437/Interspeech.2022-61}
+}
+
+@techreport{Nam2021,
+  author = "Nam, Hyeonuk and Ko, Byeong-Yun and Lee, Gyeong-Tae and Kim, Seong-Hu and Jung, Won-Ho and Choi, Sang-Min and Park, Yong-Hwa",
+  title = "Heavily Augmented Sound Event Detection utilizing Weak Predictions",
+  booktitle = "DCASE2021 Challenge",
+  year = "2021",
+  month = "June",
+  abstract = "The performance of Sound Event Detection (SED) systems are greatly limited by the difficulty in generating large strongly labeled dataset. In this work, we used two main approaches to overcome the lack of strongly labeled data. First, we applied heavy data augmentation on input features. Data augmentation methods used include not only conventional methods used in speech/audio domains but also our proposed method named FilterAugment. Second, we propose two methods to utilize weak predictions to enhance weakly supervised SED performance. As a result, we obtained the best PSDS1 of 0.4336 and best PSDS2 of 0.8161 on the DESED real validation dataset."
 }
