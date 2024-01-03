@@ -3,7 +3,7 @@ layout: distill
 title: "Microphone Conversion: Mitigating Device Variability in Sound Event Classification"
 description: "[ICASSP 2024] A generative method to tackle domain mismatch problem in sound event classifcation systems"
 giscus_comments: true
-date: 2023-12-25 00:08:00
+date: 2024-01-03 15:58:00
 tags: deep-learning generative-AI research audio-event-classification
 categories: research
 featured: true
