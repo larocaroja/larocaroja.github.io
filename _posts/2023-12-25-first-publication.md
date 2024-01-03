@@ -18,19 +18,8 @@ bibliography: 2023-12-25-first-publication.bib
 
 toc:
   - name: Exploring the World of Sound Recognition
-      # - name: Sound Event Classification and the Challenge of Device Variability
-      # - name: Our Innovative Approach to Enhance Reliability
-  - name: "Developing a New Technique and Dataset"
-      # - name: How We Created a Unique Sound Dataset
-      # - name: Simplifying Our Method for Better Sound Recognition
-  - name: "Experiments and Results"
-      # - name: "Comparative Analysis: Our Method vs. Traditional Approaches"
-      # - name: Implications and Impact of Our Findings
-  - name: "The Future of Sound Event Classification"
-      # - name: Summarizing Our Contributions
-      # - name: Future Directions and Potential Applications
-  - name: Further Insights and References
-      # - name: Additional Resources for Enthusiasts and Researchers
+  - name: Developing a New Technique and Dataset
+  - name: Experiments and Results
 ---
 
 ## Exploring the World of Sound Recognition
@@ -38,7 +27,7 @@ toc:
 Sound Event Classification (SEC) is a fascinating area of technology that aims to identify different types of sounds, like speech, music, and environmental noises, using advanced signal processing and machine learning techniques. Sound Event Classification (SEC) powers popular technologies like Apple’s Sound Recognition, Amazon's Alexa, and Google Home, enabling them to identify sounds from speech to environmental noises. Despite its broad applications, SEC faces challenges, particularly when audio is recorded on different devices, leading to performance issues. These variations, often imperceptible to human ears, can drastically affect the performance of SEC systems.
 
 <div class="fake-img l-body">
-  <p>{% include figure.html path="assets/img/apple-sound-recognition.png" %}</p>
+  <p>{% include figure.html path="assets/img/mic_conversion/apple-sound-recognition.png" %}</p>
 </div>
 <div class="caption">
   Apple's Sound Recognition <https://www.youtube.com/watch?v=Db9Xsw5Aa5w>
@@ -56,7 +45,7 @@ In our journey to enhance sound event classification, we crafted the 'Deeply Dev
 The recording process unfolded in an anechoic chamber, an environment meticulously designed to eliminate external noise and echo, ensuring pristine audio capture. This setup allowed us to systematically record each sound class, with devices positioned to optimally capture the emitted sounds. The result is two subsets: a comprehensive one with all sound classes and devices, and a smaller, focused subset. Each sound event in these subsets was aligned and annotated with precision, offering a rich resource for analyzing how different devices impact sound event classification.
 
 <div class="fake-img l-body">
-  <p>{% include figure.html path="assets/img/anechoic-chamber.jpg" %}</p>
+  <p>{% include figure.html path="assets/img/mic_conversion/anechoic-chamber.jpg" %}</p>
 </div>
 <div class="caption">
   The anechoic chamber used for the experiments
@@ -87,56 +76,61 @@ Through this approach, we were able to effectively 'translate' audio data across
 
 ## Experiments and Results
 ### Comparative Analysis: Our Method vs. Traditional Approaches
-In our research, we demonstrated how our proposed method can benefit SEC systems in the face of device variability. We also conducted a thorough examination of the leading methods from recent DCASE Challenges, which are designed to mitigate device variability in sound event classification (SEC) systems, and compare their results with ours. 
+In our research, we demonstrated how our proposed method can benefit SEC systems in the face of device variability. We also conducted a thorough examination of the leading methods from recent DCASE Challenges, which are designed to mitigate device variability in sound event classification (SEC) systems, and compare their results with ours. The experiments were conducted using audio samples recorded from 7 different recording devices: iPhone 14, Galaxy S22, iPad 7, Galaxy Tab A8, Apple Watch SE, Macbook Pro(’20), and LG Gram(’20).
 
-We evaluated techniques like Freq-MixStyle<d-cite key="Schmid2022"></d-cite> and Residual Normalization<d-cite key="Kim2021b"></d-cite>, which leverage frequency-wise statistics for improved generalization. Additionally, we explored an extended version known as Relaxed Instance Frequency-wise Normalization (RFN)<d-cite key="kim22_interspeechw"></d-cite> applied across five bottleneck blocks, and FilterAugment<d-cite key="Nam2021"></d-cite>, which adjusts spectrograms using optimally generated linear filters. Our testing also included standard data augmentations such as Gaussian noise, room impulse response, and pitch shift, along with advanced methods like SpecAugment and MixUp, each applied with a probability of 0.5, except for RFN.
+We evaluated techniques like Freq-MixStyle<d-cite key="Schmid2022"></d-cite> and Residual Normalization<d-cite key="Kim2021b"></d-cite>, which leverage frequency-wise statistics for improved generalization. Additionally, we explored an extended version known as Relaxed Instance Frequency-wise Normalization (RFN)<d-cite key="kim22_interspeech"></d-cite> applied across five bottleneck blocks, and FilterAugment<d-cite key="Nam2021"></d-cite>, which adjusts spectrograms using optimally generated linear filters. Our testing also included standard data augmentations such as Gaussian noise, room impulse response, and pitch shift, along with advanced methods like SpecAugment and MixUp, each applied with a probability of 0.5, except for RFN.
 
-Our evaluation, as detailed in Tables 1 and 2, highlighted significant performance vulnerabilities in SEC systems when dealing with heterogeneous recording devices. A striking example was observed in the case of T3, where there was a dramatic performance drop of up to 73.7% compared to the baseline 'Real' metric. Conversely, models showed better performance on devices like T2 and T5, which share more similarities with the training data, as evidenced by their proximity in the t-SNE feature space, with a more modest performance drop of 26.3% and 29.5%, respectively. Traditional data augmentation methods offered limited improvement.
+| Method               | S    | T1   | T2   | T3   | T4   | T5   | T6   | Overall (- S)  |
+|----------------------|------|------|------|------|------|------|------|----------------|
+| Baseline             | 0.982| 0.409| 0.709| 0.248| 0.471| 0.687| 0.491| 0.503 ± 0.167 |
+| Gaussian Noise       | 0.983| 0.708| 0.918| 0.576| 0.565| 0.780| 0.683| 0.705 ± 0.127 |
+| Reverberation        | 0.980| 0.895| 0.852| 0.539| 0.832| 0.736| 0.360| 0.702 ± 0.202 |
+| Pitch Shift          | 0.981| 0.471| 0.744| 0.221| 0.658| 0.648| 0.442| 0.531 ± 0.183 |
+| SpecAugment          | **0.985**| 0.372| 0.762| 0.214| 0.363| 0.634| 0.324| 0.445 ± 0.199 |
+| MixUp                | 0.983| 0.336| 0.677| 0.213| 0.449| 0.656| 0.387| 0.453 ± 0.175 |
+| FilterAugment        | 0.981| 0.964| 0.891| 0.586| 0.874| 0.794| 0.642| 0.792 ± 0.143 |
+| Freq-MixStyle        | 0.974| 0.839| 0.879| 0.795| 0.902| **0.885**| 0.832| 0.855 ± 0.038 |
+| RFN                  | 0.980| 0.919| 0.909| 0.742| 0.907| 0.829| 0.614| 0.820 ± 0.116 |
+| MC-100-Gen           | 0.981| 0.958| **0.912**| 0.894| 0.899| 0.831| 0.852| 0.891 ± 0.043 |
+| MC-200-Gen           | 0.982| **0.969**| 0.909| **0.903**| **0.912**| 0.859| **0.887**| **0.907 ± 0.035** |
+| MC-100-Adapt (p=0.5) | -    | 0.956| 0.905| 0.904| 0.880| 0.902| 0.890| 0.906 ± 0.025 |
+| MC-100-Adapt (p=1.0) | -    | 0.891| 0.906| 0.855| 0.834| 0.811| 0.808| 0.851 ± 0.039 |
+| MC-200-Adapt (p=0.5) | -    | 0.965| **0.922**| **0.906**| 0.910| **0.908**| **0.907**| **0.920 ± 0.022** |
+| MC-200-Adapt (p=1.0) | -    | 0.935| 0.917| 0.864| 0.873| 0.880| 0.848| 0.886 ± 0.032 |
+| Real                 | 0.983| 0.982| 0.972| 0.985| 0.979| 0.983| 0.986| 0.981 ± 0.005 |
+
+
+Our evaluation, as detailed in the above table, highlighted significant performance vulnerabilities in SEC systems when dealing with heterogeneous recording devices. A striking example was observed in the case of Galaxy Tab A8, where there was a dramatic performance drop of up to 73.7% compared to the baseline 'Real' metric, an ideal case where training and inference domain matches. Conversely, models showed better performance on devices like iPad 7 and Macbook Pro(’20), which share more similarities with the training data, as evidenced by their proximity in the t-SNE feature space, with a more modest performance drop of 26.3% and 29.5%, respectively. Traditional data augmentation methods offered limited improvement.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mic_conversion/tsne_all_5.png" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mic_conversion/tsne_all_inverse_30.png" %}
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mic_conversion/tsne_whistle_30.png" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/mic_conversion/tsne_whistle_inverse_30.png" %}
+    </div>
+</div>
+<div class="caption">
+    2D t-SNE visualization of intermediate embeddings of the baseline on the development data. The left column illustrates the full development set and whistle sound samples drawn from it, respectively. The right column are sound samples converted to iPhone 14 using the date from the left.
+</div>
 
 Among the more specialized recent approaches, Freq-MixStyle emerged as the most effective, achieving an average F1 score of 85.5% and demonstrating consistent performance with a narrow 3.8% confidence interval. However, our Microphone Conversion technique, MC-200-Gen, outshone these methods with an impressive average F1 score of 90.7% and minimal variability (3.5%). In scenarios requiring adaptation, SEC models employing adaptation strategies generally outperformed MC-200-Adapt (p=0.5) on 4 out of 6 target devices, showing a 1.3% gain in overall performance. Remarkably, they nearly matched the 'Real' performance metric when trained on a diverse set of devices.
 
 Our findings underscore the effectiveness of our Microphone Conversion approach, particularly its capability to enhance both generalization and adaptability of SEC systems. The promising results also suggest the potential for further optimization with extended training durations, paving the way for more robust and reliable SEC systems in the face of device variability.
 
 ### Implications and Impact of Our Findings
-***
+In addressing the challenge of device variability in sound event classification (SEC) systems, our study has made significant strides with far-reaching implications. The development of a specialized sound event dataset, recorded across a variety of real-world devices in an anechoic chamber, marks a substantial advancement in the field. This dataset not only provides a more realistic and robust basis for training and testing SEC systems but also sets a new standard for future research in this area.
 
-## The Future of Sound Event Classification
-### Summarizing Our Contributions
-You can add interative plots using plotly + iframes :framed_picture:
+Our introduction of the Microphone Conversion method has been a game-changer in improving the performance of SEC systems. By significantly outperforming recent approaches in both generalization and adaptation tasks, this method showcases the potential of machine learning techniques in overcoming complex challenges in audio signal processing. The ability of our method to adapt to various recording devices enhances the versatility and reliability of SEC systems, paving the way for their broader application in diverse real-world scenarios. This includes improved accuracy in voice-activated devices, enhanced sound recognition in security systems, and more effective environmental sound analysis in smart city infrastructure.
 
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/demo.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
-</div>
+However, our findings also highlight an area for future exploration. The CycleGAN component of our solution, while effective, is currently limited by its assumption of a one-to-one domain mapping. This necessitates separate models for each domain pair, which can be resource-intensive and less scalable. Exploring the integration of impulse response characteristics with CycleGAN presents an exciting opportunity for more versatile domain mapping. Such advancements could lead to even more sophisticated and adaptable SEC systems, capable of handling a wider array of acoustic environments with fewer model constraints.
 
-The plot must be generated separately and saved into an HTML file.
-To generate the plot that you see above, you can use the following code snippet:
-
-{% highlight python %}
-import pandas as pd
-import plotly.express as px
-df = pd.read_csv(
-  'https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv'
-)
-fig = px.density_mapbox(
-  df,
-  lat='Latitude',
-  lon='Longitude',
-  z='Magnitude',
-  radius=10,
-  center=dict(lat=0, lon=180),
-  zoom=0,
-  mapbox_style="stamen-terrain",
-)
-fig.show()
-fig.write_html('assets/plotly/demo.html')
-{% endhighlight %}
-### Future Directions and Potential Applications
-***
-
-## Further Insights and References
-### Additional Resources for Enthusiasts and Researchers
-Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
-
-{% details Click here to know more %}
-Additional details, where math $$ 2x - 1 $$ and `code` is rendered correctly.
-{% enddetails %}
+In summary, our findings not only demonstrate a significant improvement in handling device variability in SEC but also open up new avenues for research and development. The implications of this work extend beyond academic research, suggesting practical applications in various industries where sound recognition plays a crucial role. As technology continues to evolve, the integration of our methods could lead to more intelligent, adaptable, and efficient sound recognition systems, fundamentally transforming how we interact with and interpret the sounds in our environment.
