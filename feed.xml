@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-12-30T09:18:38+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-03T23:58:48+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Microphone Conversion: Mitigating Device Variability in Sound Event Classification</title><link href="https://larocaroja.github.io/blog/2023/first-publication/" rel="alternate" type="text/html" title="Microphone Conversion: Mitigating Device Variability in Sound Event Classification" /><published>2023-12-25T00:08:00+00:00</published><updated>2023-12-25T00:08:00+00:00</updated><id>https://larocaroja.github.io/blog/2023/first-publication</id><content type="html" xml:base="https://larocaroja.github.io/blog/2023/first-publication/"><![CDATA[<h2 id="exploring-the-world-of-sound-recognition">Exploring the World of Sound Recognition</h2>
 <h3 id="sound-event-classification-and-the-challenge-of-device-variability">Sound Event Classification and the Challenge of Device Variability</h3>
 <p>Sound Event Classification (SEC) is a fascinating area of technology that aims to identify different types of sounds, like speech, music, and environmental noises, using advanced signal processing and machine learning techniques. Sound Event Classification (SEC) powers popular technologies like Apple’s Sound Recognition, Amazon’s Alexa, and Google Home, enabling them to identify sounds from speech to environmental noises. Despite its broad applications, SEC faces challenges, particularly when audio is recorded on different devices, leading to performance issues. These variations, often imperceptible to human ears, can drastically affect the performance of SEC systems.</p>
@@ -10,7 +10,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/apple-sound-recognition.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/mic_conversion/apple-sound-recognition.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture>
 
@@ -39,7 +39,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/anechoic-chamber.jpg" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/mic_conversion/anechoic-chamber.jpg" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture>
 
@@ -71,55 +71,279 @@
 
 <h2 id="experiments-and-results">Experiments and Results</h2>
 <h3 id="comparative-analysis-our-method-vs-traditional-approaches">Comparative Analysis: Our Method vs. Traditional Approaches</h3>
-<p>In our research, we demonstrated how our proposed method can benefit SEC systems in the face of device variability. We also conducted a thorough examination of the leading methods from recent DCASE Challenges, which are designed to mitigate device variability in sound event classification (SEC) systems, and compare their results with ours.</p>
+<p>In our research, we demonstrated how our proposed method can benefit SEC systems in the face of device variability. We also conducted a thorough examination of the leading methods from recent DCASE Challenges, which are designed to mitigate device variability in sound event classification (SEC) systems, and compare their results with ours. The experiments were conducted using audio samples recorded from 7 different recording devices: iPhone 14, Galaxy S22, iPad 7, Galaxy Tab A8, Apple Watch SE, Macbook Pro(’20), and LG Gram(’20).</p>
 
-<p>We evaluated techniques like Freq-MixStyle<d-cite key="Schmid2022"></d-cite> and Residual Normalization<d-cite key="Kim2021b"></d-cite>, which leverage frequency-wise statistics for improved generalization. Additionally, we explored an extended version known as Relaxed Instance Frequency-wise Normalization (RFN)<d-cite key="kim22_interspeechw"></d-cite> applied across five bottleneck blocks, and FilterAugment<d-cite key="Nam2021"></d-cite>, which adjusts spectrograms using optimally generated linear filters. Our testing also included standard data augmentations such as Gaussian noise, room impulse response, and pitch shift, along with advanced methods like SpecAugment and MixUp, each applied with a probability of 0.5, except for RFN.</p>
+<p>We evaluated techniques like Freq-MixStyle<d-cite key="Schmid2022"></d-cite> and Residual Normalization<d-cite key="Kim2021b"></d-cite>, which leverage frequency-wise statistics for improved generalization. Additionally, we explored an extended version known as Relaxed Instance Frequency-wise Normalization (RFN)<d-cite key="kim22_interspeech"></d-cite> applied across five bottleneck blocks, and FilterAugment<d-cite key="Nam2021"></d-cite>, which adjusts spectrograms using optimally generated linear filters. Our testing also included standard data augmentations such as Gaussian noise, room impulse response, and pitch shift, along with advanced methods like SpecAugment and MixUp, each applied with a probability of 0.5, except for RFN.</p>
 
-<p>Our evaluation, as detailed in Tables 1 and 2, highlighted significant performance vulnerabilities in SEC systems when dealing with heterogeneous recording devices. A striking example was observed in the case of T3, where there was a dramatic performance drop of up to 73.7% compared to the baseline ‘Real’ metric. Conversely, models showed better performance on devices like T2 and T5, which share more similarities with the training data, as evidenced by their proximity in the t-SNE feature space, with a more modest performance drop of 26.3% and 29.5%, respectively. Traditional data augmentation methods offered limited improvement.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>S</th>
+      <th>T1</th>
+      <th>T2</th>
+      <th>T3</th>
+      <th>T4</th>
+      <th>T5</th>
+      <th>T6</th>
+      <th>Overall (- S)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Baseline</td>
+      <td>0.982</td>
+      <td>0.409</td>
+      <td>0.709</td>
+      <td>0.248</td>
+      <td>0.471</td>
+      <td>0.687</td>
+      <td>0.491</td>
+      <td>0.503 ± 0.167</td>
+    </tr>
+    <tr>
+      <td>Gaussian Noise</td>
+      <td>0.983</td>
+      <td>0.708</td>
+      <td>0.918</td>
+      <td>0.576</td>
+      <td>0.565</td>
+      <td>0.780</td>
+      <td>0.683</td>
+      <td>0.705 ± 0.127</td>
+    </tr>
+    <tr>
+      <td>Reverberation</td>
+      <td>0.980</td>
+      <td>0.895</td>
+      <td>0.852</td>
+      <td>0.539</td>
+      <td>0.832</td>
+      <td>0.736</td>
+      <td>0.360</td>
+      <td>0.702 ± 0.202</td>
+    </tr>
+    <tr>
+      <td>Pitch Shift</td>
+      <td>0.981</td>
+      <td>0.471</td>
+      <td>0.744</td>
+      <td>0.221</td>
+      <td>0.658</td>
+      <td>0.648</td>
+      <td>0.442</td>
+      <td>0.531 ± 0.183</td>
+    </tr>
+    <tr>
+      <td>SpecAugment</td>
+      <td><strong>0.985</strong></td>
+      <td>0.372</td>
+      <td>0.762</td>
+      <td>0.214</td>
+      <td>0.363</td>
+      <td>0.634</td>
+      <td>0.324</td>
+      <td>0.445 ± 0.199</td>
+    </tr>
+    <tr>
+      <td>MixUp</td>
+      <td>0.983</td>
+      <td>0.336</td>
+      <td>0.677</td>
+      <td>0.213</td>
+      <td>0.449</td>
+      <td>0.656</td>
+      <td>0.387</td>
+      <td>0.453 ± 0.175</td>
+    </tr>
+    <tr>
+      <td>FilterAugment</td>
+      <td>0.981</td>
+      <td>0.964</td>
+      <td>0.891</td>
+      <td>0.586</td>
+      <td>0.874</td>
+      <td>0.794</td>
+      <td>0.642</td>
+      <td>0.792 ± 0.143</td>
+    </tr>
+    <tr>
+      <td>Freq-MixStyle</td>
+      <td>0.974</td>
+      <td>0.839</td>
+      <td>0.879</td>
+      <td>0.795</td>
+      <td>0.902</td>
+      <td><strong>0.885</strong></td>
+      <td>0.832</td>
+      <td>0.855 ± 0.038</td>
+    </tr>
+    <tr>
+      <td>RFN</td>
+      <td>0.980</td>
+      <td>0.919</td>
+      <td>0.909</td>
+      <td>0.742</td>
+      <td>0.907</td>
+      <td>0.829</td>
+      <td>0.614</td>
+      <td>0.820 ± 0.116</td>
+    </tr>
+    <tr>
+      <td>MC-100-Gen</td>
+      <td>0.981</td>
+      <td>0.958</td>
+      <td><strong>0.912</strong></td>
+      <td>0.894</td>
+      <td>0.899</td>
+      <td>0.831</td>
+      <td>0.852</td>
+      <td>0.891 ± 0.043</td>
+    </tr>
+    <tr>
+      <td>MC-200-Gen</td>
+      <td>0.982</td>
+      <td><strong>0.969</strong></td>
+      <td>0.909</td>
+      <td><strong>0.903</strong></td>
+      <td><strong>0.912</strong></td>
+      <td>0.859</td>
+      <td><strong>0.887</strong></td>
+      <td><strong>0.907 ± 0.035</strong></td>
+    </tr>
+    <tr>
+      <td>MC-100-Adapt (p=0.5)</td>
+      <td>-</td>
+      <td>0.956</td>
+      <td>0.905</td>
+      <td>0.904</td>
+      <td>0.880</td>
+      <td>0.902</td>
+      <td>0.890</td>
+      <td>0.906 ± 0.025</td>
+    </tr>
+    <tr>
+      <td>MC-100-Adapt (p=1.0)</td>
+      <td>-</td>
+      <td>0.891</td>
+      <td>0.906</td>
+      <td>0.855</td>
+      <td>0.834</td>
+      <td>0.811</td>
+      <td>0.808</td>
+      <td>0.851 ± 0.039</td>
+    </tr>
+    <tr>
+      <td>MC-200-Adapt (p=0.5)</td>
+      <td>-</td>
+      <td>0.965</td>
+      <td><strong>0.922</strong></td>
+      <td><strong>0.906</strong></td>
+      <td>0.910</td>
+      <td><strong>0.908</strong></td>
+      <td><strong>0.907</strong></td>
+      <td><strong>0.920 ± 0.022</strong></td>
+    </tr>
+    <tr>
+      <td>MC-200-Adapt (p=1.0)</td>
+      <td>-</td>
+      <td>0.935</td>
+      <td>0.917</td>
+      <td>0.864</td>
+      <td>0.873</td>
+      <td>0.880</td>
+      <td>0.848</td>
+      <td>0.886 ± 0.032</td>
+    </tr>
+    <tr>
+      <td>Real</td>
+      <td>0.983</td>
+      <td>0.982</td>
+      <td>0.972</td>
+      <td>0.985</td>
+      <td>0.979</td>
+      <td>0.983</td>
+      <td>0.986</td>
+      <td>0.981 ± 0.005</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Our evaluation, as detailed in the above table, highlighted significant performance vulnerabilities in SEC systems when dealing with heterogeneous recording devices. A striking example was observed in the case of Galaxy Tab A8, where there was a dramatic performance drop of up to 73.7% compared to the baseline ‘Real’ metric, an ideal case where training and inference domain matches. Conversely, models showed better performance on devices like iPad 7 and Macbook Pro(’20), which share more similarities with the training data, as evidenced by their proximity in the t-SNE feature space, with a more modest performance drop of 26.3% and 29.5%, respectively. Traditional data augmentation methods offered limited improvement.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/mic_conversion/tsne_all_5.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/mic_conversion/tsne_all_inverse_30.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/mic_conversion/tsne_whistle_30.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/mic_conversion/tsne_whistle_inverse_30.png" width="auto" height="auto" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="caption">
+    2D t-SNE visualization of intermediate embeddings of the baseline on the development data. The left column illustrates the full development set and whistle sound samples drawn from it, respectively. The right column are sound samples converted to iPhone 14 using the date from the left.
+</div>
 
 <p>Among the more specialized recent approaches, Freq-MixStyle emerged as the most effective, achieving an average F1 score of 85.5% and demonstrating consistent performance with a narrow 3.8% confidence interval. However, our Microphone Conversion technique, MC-200-Gen, outshone these methods with an impressive average F1 score of 90.7% and minimal variability (3.5%). In scenarios requiring adaptation, SEC models employing adaptation strategies generally outperformed MC-200-Adapt (p=0.5) on 4 out of 6 target devices, showing a 1.3% gain in overall performance. Remarkably, they nearly matched the ‘Real’ performance metric when trained on a diverse set of devices.</p>
 
 <p>Our findings underscore the effectiveness of our Microphone Conversion approach, particularly its capability to enhance both generalization and adaptability of SEC systems. The promising results also suggest the potential for further optimization with extended training durations, paving the way for more robust and reliable SEC systems in the face of device variability.</p>
 
 <h3 id="implications-and-impact-of-our-findings">Implications and Impact of Our Findings</h3>
-<hr />
+<p>In addressing the challenge of device variability in sound event classification (SEC) systems, our study has made significant strides with far-reaching implications. The development of a specialized sound event dataset, recorded across a variety of real-world devices in an anechoic chamber, marks a substantial advancement in the field. This dataset not only provides a more realistic and robust basis for training and testing SEC systems but also sets a new standard for future research in this area.</p>
 
-<h2 id="the-future-of-sound-event-classification">The Future of Sound Event Classification</h2>
-<h3 id="summarizing-our-contributions">Summarizing Our Contributions</h3>
-<p>You can add interative plots using plotly + iframes :framed_picture:</p>
+<p>Our introduction of the Microphone Conversion method has been a game-changer in improving the performance of SEC systems. By significantly outperforming recent approaches in both generalization and adaptation tasks, this method showcases the potential of machine learning techniques in overcoming complex challenges in audio signal processing. The ability of our method to adapt to various recording devices enhances the versatility and reliability of SEC systems, paving the way for their broader application in diverse real-world scenarios. This includes improved accuracy in voice-activated devices, enhanced sound recognition in security systems, and more effective environmental sound analysis in smart city infrastructure.</p>
 
-<div class="l-page">
-  <iframe src="/assets/plotly/demo.html" frameborder="0" scrolling="no" height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
-</div>
+<p>However, our findings also highlight an area for future exploration. The CycleGAN component of our solution, while effective, is currently limited by its assumption of a one-to-one domain mapping. This necessitates separate models for each domain pair, which can be resource-intensive and less scalable. Exploring the integration of impulse response characteristics with CycleGAN presents an exciting opportunity for more versatile domain mapping. Such advancements could lead to even more sophisticated and adaptable SEC systems, capable of handling a wider array of acoustic environments with fewer model constraints.</p>
 
-<p>The plot must be generated separately and saved into an HTML file.
-To generate the plot that you see above, you can use the following code snippet:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="n">plotly.express</span> <span class="k">as</span> <span class="n">px</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span>
-  <span class="sh">'</span><span class="s">https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv</span><span class="sh">'</span>
-<span class="p">)</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="p">.</span><span class="nf">density_mapbox</span><span class="p">(</span>
-  <span class="n">df</span><span class="p">,</span>
-  <span class="n">lat</span><span class="o">=</span><span class="sh">'</span><span class="s">Latitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">lon</span><span class="o">=</span><span class="sh">'</span><span class="s">Longitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">z</span><span class="o">=</span><span class="sh">'</span><span class="s">Magnitude</span><span class="sh">'</span><span class="p">,</span>
-  <span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-  <span class="n">center</span><span class="o">=</span><span class="nf">dict</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="mi">180</span><span class="p">),</span>
-  <span class="n">zoom</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-  <span class="n">mapbox_style</span><span class="o">=</span><span class="sh">"</span><span class="s">stamen-terrain</span><span class="sh">"</span><span class="p">,</span>
-<span class="p">)</span>
-<span class="n">fig</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
-<span class="n">fig</span><span class="p">.</span><span class="nf">write_html</span><span class="p">(</span><span class="sh">'</span><span class="s">assets/plotly/demo.html</span><span class="sh">'</span><span class="p">)</span></code></pre></figure>
-
-<h3 id="future-directions-and-potential-applications">Future Directions and Potential Applications</h3>
-<hr />
-
-<h2 id="further-insights-and-references">Further Insights and References</h2>
-<h3 id="additional-resources-for-enthusiasts-and-researchers">Additional Resources for Enthusiasts and Researchers</h3>
-<p>Details boxes are collapsible boxes which hide additional information from the user. They can be added with the <code class="language-plaintext highlighter-rouge">details</code> liquid tag:</p>
-
-<details><summary>Click here to know more</summary>
-<p>Additional details, where math \(2x - 1\) and <code class="language-plaintext highlighter-rouge">code</code> is rendered correctly.</p>
-</details>]]></content><author><name>Hongseok Oh</name></author><category term="research" /><category term="deep-learning" /><category term="generative-AI" /><category term="research" /><category term="audio-event-classification" /><summary type="html"><![CDATA[[ICASSP 2024] A generative method to tackle domain mismatch problem in sound event classifcation systems]]></summary></entry></feed>
+<p>In summary, our findings not only demonstrate a significant improvement in handling device variability in SEC but also open up new avenues for research and development. The implications of this work extend beyond academic research, suggesting practical applications in various industries where sound recognition plays a crucial role. As technology continues to evolve, the integration of our methods could lead to more intelligent, adaptable, and efficient sound recognition systems, fundamentally transforming how we interact with and interpret the sounds in our environment.</p>]]></content><author><name>Hongseok Oh</name></author><category term="research" /><category term="deep-learning" /><category term="generative-AI" /><category term="research" /><category term="audio-event-classification" /><summary type="html"><![CDATA[[ICASSP 2024] A generative method to tackle domain mismatch problem in sound event classifcation systems]]></summary></entry></feed>
