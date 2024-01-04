@@ -145,7 +145,7 @@ In summary, our findings not only demonstrate a significant improvement in handl
 ***
 
 ## Citation
-Myeonghoon Ryu<sup>\*</sup>, Hongseok Oh<sup>\*</sup>, Han Park, Suji Le. “Microphone Conversion: Mitigating Device Variability in Sound Event Classification”, in *2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*, 2024
+Myeonghoon Ryu<sup>\*</sup>, Hongseok Oh<sup>\*</sup>, Han Park, Suji Lee. “Microphone Conversion: Mitigating Device Variability in Sound Event Classification”, in *2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*, 2024
 
 ```bibtex
 @inproceedings{icassp2024mic_conversion,
