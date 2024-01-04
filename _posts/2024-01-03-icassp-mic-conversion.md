@@ -54,6 +54,13 @@ The recording process unfolded in an anechoic chamber, an environment meticulous
 ### Simplifying Our Method for Better Sound Recognition
 In our pursuit to enhance sound event classification (SEC), we introduced a novel concept called 'Microphone Conversion'. This innovative technique aims to bridge the gap between different recording devices by transforming the spectrograms from one device to mimic those of another. At the heart of this technique is a mapping function, designed to convert the spectrogram data from a source device ($X_A$) into a form that statistically resembles the target device ($X_B$).
 
+<div class="fake-img l-body">
+  <p>{% include figure.html path="assets/img/mic_conversion/conversion-visualization.png" %}</p>
+</div>
+<div class="caption">
+  Spectrograms of the real/generated coughing sounds are presented in the top and bottom rows, respectively. The generated ones are produced by corresponding Microphone Conversion networks using a real input of iPhone 14.
+</div>
+
 To achieve this transformation, we employed CycleGAN<d-cite key="zhu2017unpaired"></d-cite>, a groundbreaking framework in the realm of unsupervised image-to-image translation. CycleGAN is adept at learning mappings between two unpaired data domains, making it ideal for our purpose. Built on Generative Adversarial Networks (GANs), it involves two generators, $F$ and $G$, and two discriminators, $D_A$ and $D_B$. These components work in tandem: while the generators map data bijectively between the domains, the discriminators aim to distinguish real images from the converted ones.
 
 The effectiveness of CycleGAN in our context lies in its dual-loss setup. The adversarial loss pushes the generators to produce outputs that are indistinguishable from the target domain, ensuring authenticity. Meanwhile, the cycle-consistency loss guarantees that the generated images, once reverse-mapped, closely resemble their original forms. This balance ensures that while the style of the spectrograms adapts to the target domain, their content remains intact and accurate.
@@ -122,7 +129,7 @@ Our evaluation, as detailed in the above table, highlighted significant performa
     2D t-SNE visualization of intermediate embeddings of the baseline on the development data. The left column illustrates the full development set and whistle sound samples drawn from it, respectively. The right column are sound samples converted to iPhone 14 using the date from the left.
 </div>
 
-Among the more specialized recent approaches, Freq-MixStyle emerged as the most effective, achieving an average F1 score of 85.5% and demonstrating consistent performance with a narrow 3.8% confidence interval. However, our Microphone Conversion technique, MC-200-Gen, outshone these methods with an impressive average F1 score of 90.7% and minimal variability (3.5%). In scenarios requiring adaptation, SEC models employing adaptation strategies generally outperformed MC-200-Adapt (p=0.5) on 4 out of 6 target devices, showing a 1.3% gain in overall performance. Remarkably, they nearly matched the 'Real' performance metric when trained on a diverse set of devices.
+Among the more specialized recent approaches, Freq-MixStyle emerged as the most effective, achieving an average F1 score of 85.5% and demonstrating consistent performance with a narrow 3.8% confidence interval. However, our Microphone Conversion technique, MC-200-Gen, trained for 200 epochs, outshone these methods with an impressive average F1 score of 90.7% and minimal variability (3.5%). In scenarios requiring adaptation, SEC models employing adaptation strategies generally outperformed MC-200-Adapt (p=0.5) on 4 out of 6 target devices, showing a 1.3% gain in overall performance. Remarkably, they nearly matched the 'Real' performance metric when trained on a diverse set of devices.
 
 Our findings underscore the effectiveness of our Microphone Conversion approach, particularly its capability to enhance both generalization and adaptability of SEC systems. The promising results also suggest the potential for further optimization with extended training durations, paving the way for more robust and reliable SEC systems in the face of device variability.
 
