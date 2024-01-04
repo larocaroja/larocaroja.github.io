@@ -14,7 +14,7 @@ authors:
     affiliations:
       name: University of Calfironia, San Diego
 
-bibliography: 2023-12-25-first-publication.bib
+bibliography: 2024-01-03-icassp-mic-conversion.bib
 
 toc:
   - name: Exploring the World of Sound Recognition
