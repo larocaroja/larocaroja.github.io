@@ -141,3 +141,18 @@ Our introduction of the Microphone Conversion method has been a game-changer in 
 However, our findings also highlight an area for future exploration. The CycleGAN component of our solution, while effective, is currently limited by its assumption of a one-to-one domain mapping. This necessitates separate models for each domain pair, which can be resource-intensive and less scalable. Exploring the integration of impulse response characteristics with CycleGAN presents an exciting opportunity for more versatile domain mapping. Such advancements could lead to even more sophisticated and adaptable SEC systems, capable of handling a wider array of acoustic environments with fewer model constraints.
 
 In summary, our findings not only demonstrate a significant improvement in handling device variability in SEC but also open up new avenues for research and development. The implications of this work extend beyond academic research, suggesting practical applications in various industries where sound recognition plays a crucial role. As technology continues to evolve, the integration of our methods could lead to more intelligent, adaptable, and efficient sound recognition systems, fundamentally transforming how we interact with and interpret the sounds in our environment.
+
+***
+
+## Citation
+Myeonghoon Ryu<sup>\*</sup>, Hongseok Oh<sup>\*</sup>, Suji Lee, Han Park. “Microphone Conversion: Mitigating Device Variability in Sound Event Classification”, in *2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)*, 2024
+
+```bibtex
+@inproceedings{icassp2024mic_conversion,
+    author = {Myeonghoon Ryu and Hongseok Oh and Han Park and Suji Lee},
+    title = {Microphone Conversion: Mitigating Device Variability in Sound Event Classification},
+    booktitle = {2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+    year = {2024},
+    organization={IEEE}
+}
+```
