@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-04T16:52:14+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://larocaroja.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://larocaroja.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-01-05T07:36:40+00:00</updated><id>https://larocaroja.github.io/feed.xml</id><title type="html">Hongseok Oh</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 </subtitle><entry><title type="html">Microphone Conversion: Mitigating Device Variability in Sound Event Classification</title><link href="https://larocaroja.github.io/blog/2024/icassp-mic-conversion/" rel="alternate" type="text/html" title="Microphone Conversion: Mitigating Device Variability in Sound Event Classification" /><published>2024-01-03T15:58:00+00:00</published><updated>2024-01-03T15:58:00+00:00</updated><id>https://larocaroja.github.io/blog/2024/icassp-mic-conversion</id><content type="html" xml:base="https://larocaroja.github.io/blog/2024/icassp-mic-conversion/"><![CDATA[<h2 id="exploring-the-world-of-sound-recognition">Exploring the World of Sound Recognition</h2>
 <h3 id="sound-event-classification-and-the-challenge-of-device-variability">Sound Event Classification and the Challenge of Device Variability</h3>
 <p>Sound Event Classification (SEC) is a fascinating area of technology that aims to identify different types of sounds, like speech, music, and environmental noises, using advanced signal processing and machine learning techniques. Sound Event Classification (SEC) powers popular technologies like Apple’s Sound Recognition, Amazon’s Alexa, and Google Home, enabling them to identify sounds from speech to environmental noises. Despite its broad applications, SEC faces challenges, particularly when audio is recorded on different devices, leading to performance issues. These variations, often imperceptible to human ears, can drastically affect the performance of SEC systems.</p>
@@ -31,6 +31,25 @@
 <p>In our journey to enhance sound event classification, we crafted the ‘Deeply Device Dataset,’ a diverse collection capturing 75 sound classes. This dataset, a mix of direct recordings and carefully selected samples from <a href="https://www.openslr.org/13/">the RWCP Sound Scene Database</a>, includes a variety of sounds from daily life noises and human interactions to musical instruments. Key to our approach was the use of 18 different recording devices, encompassing a range of smartphones, laptops, and specialized microphones, each adding its unique acoustic signature to the dataset.</p>
 
 <p>The recording process unfolded in an anechoic chamber, an environment meticulously designed to eliminate external noise and echo, ensuring pristine audio capture. This setup allowed us to systematically record each sound class, with devices positioned to optimally capture the emitted sounds. The result is two subsets: a comprehensive one with all sound classes and devices, and a smaller, focused subset. Each sound event in these subsets was aligned and annotated with precision, offering a rich resource for analyzing how different devices impact sound event classification.</p>
+
+<p>A comprehensive list of classes is provided as follows:</p>
+
+<ul>
+  <li>Directly-produced (25)
+    <ul>
+      <li>Sound of things (11): cell phone alarm, cell phone vibrating, hair dryer, fan, dish clanking, typing keyboard,clicking mouse, pouring water, knock, rustling, impulse</li>
+      <li>Human sound (7): speech_1 (‘help me’ in Korean), speech_2 (‘save me’ in Korean), coughing, clapping, finger snap, whistle, throat clearing</li>
+      <li>Musical instrument (7): ukulele, guitar, tambourine, hand drum, castanets, triangle, hand cymbals</li>
+    </ul>
+  </li>
+  <li>RWCP-SSD (50)
+    <ul>
+      <li>Class 1 (17): bank, bottle, bowl, candybwl, case, cherry, china, coffcan, colacan, cup, dice, magno, metal, pan, teak, trashbox, wood</li>
+      <li>Class 2 (10): aircap, cap, clap, claps, file, pump, sandpp, saw, snap, sticks</li>
+      <li>Class 3 (23): bells, book, buzzer, castanet, clock1, clock2, coffmill, coin, coins, cymbals, doorlock, dryer, horn, maracas, padlock, phone , pipong, ring, shaver, stapler, string, toy, whistle</li>
+    </ul>
+  </li>
+</ul>
 
 <div class="fake-img l-body">
   <p><figure>
