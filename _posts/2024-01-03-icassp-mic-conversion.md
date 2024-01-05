@@ -44,6 +44,17 @@ In our journey to enhance sound event classification, we crafted the 'Deeply Dev
 
 The recording process unfolded in an anechoic chamber, an environment meticulously designed to eliminate external noise and echo, ensuring pristine audio capture. This setup allowed us to systematically record each sound class, with devices positioned to optimally capture the emitted sounds. The result is two subsets: a comprehensive one with all sound classes and devices, and a smaller, focused subset. Each sound event in these subsets was aligned and annotated with precision, offering a rich resource for analyzing how different devices impact sound event classification.
 
+A comprehensive list of classes is provided as follows:
+
+- Directly-produced (25)
+  - Sound of things (11): cell phone alarm, cell phone vibrating, hair dryer, fan, dish clanking, typing keyboard,clicking mouse, pouring water, knock, rustling, impulse
+  - Human sound (7): speech_1 ('help me' in Korean), speech_2 ('save me' in Korean), coughing, clapping, finger snap, whistle, throat clearing
+  - Musical instrument (7): ukulele, guitar, tambourine, hand drum, castanets, triangle, hand cymbals
+- RWCP-SSD (50)
+  - Class 1 (17): bank, bottle, bowl, candybwl, case, cherry, china, coffcan, colacan, cup, dice, magno, metal, pan, teak, trashbox, wood
+  - Class 2 (10): aircap, cap, clap, claps, file, pump, sandpp, saw, snap, sticks
+  - Class 3 (23): bells, book, buzzer, castanet, clock1, clock2, coffmill, coin, coins, cymbals, doorlock, dryer, horn, maracas, padlock, phone , pipong, ring, shaver, stapler, string, toy, whistle
+
 <div class="fake-img l-body">
   <p>{% include figure.html path="assets/img/mic_conversion/anechoic-chamber.jpg" %}</p>
 </div>
