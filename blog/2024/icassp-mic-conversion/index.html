@@ -200,7 +200,7 @@
 
 <h2 id="developing-a-new-technique-and-dataset">Developing a New Technique and Dataset</h2>
 <h3 id="how-we-created-a-unique-sound-dataset">How We Created a Unique Sound Dataset</h3>
-<p>In our journey to enhance sound event classification, we crafted the ‘Deeply Device Dataset,’ a diverse collection capturing 75 sound classes. This dataset, a mix of direct recordings and carefully selected samples from <a href="https://www.openslr.org/13/" rel="external nofollow noopener" target="_blank">the RWCP Sound Scene Database</a>, includes a variety of sounds from daily life noises and human interactions to musical instruments. Key to our approach was the use of 18 different recording devices, encompassing a range of smartphones, laptops, and specialized microphones, each adding its unique acoustic signature to the dataset.</p>
+<p>In our journey to enhance sound event classification, we crafted the ‘Deeply Device Dataset,’ a diverse collection capturing 75 sound classes. This dataset, a mix of direct recordings and recordings of the playback of anechoics samples from <a href="https://www.openslr.org/13/" rel="external nofollow noopener" target="_blank">the RWCP Sound Scene Database</a>, includes a variety of sounds from daily life noises and human interactions to musical instruments. Key to our approach was the use of 18 different recording devices, encompassing a range of smartphones, laptops, and specialized microphones, each adding its unique acoustic signature to the dataset.</p>
 
 <p>The recording process unfolded in an anechoic chamber, an environment meticulously designed to eliminate external noise and echo, ensuring pristine audio capture. This setup allowed us to systematically record each sound class, with devices positioned to optimally capture the emitted sounds. The result is two subsets: a comprehensive one with all sound classes and devices, and a smaller, focused subset. Each sound event in these subsets was aligned and annotated with precision, offering a rich resource for analyzing how different devices impact sound event classification.</p>
 
@@ -242,7 +242,7 @@
 </div>
 
 <h3 id="simplifying-our-method-for-better-sound-recognition">Simplifying Our Method for Better Sound Recognition</h3>
-<p>In our pursuit to enhance sound event classification (SEC), we introduced a novel concept called ‘Microphone Conversion’. This innovative technique aims to bridge the gap between different recording devices by transforming the spectrograms from one device to mimic those of another. At the heart of this technique is a mapping function, designed to convert the spectrogram data from a source device ($X_A$) into a form that statistically resembles the target device ($X_B$).</p>
+<p>In our pursuit to enhance sound event classification (SEC), we introduced ‘Microphone Conversion’. This innovative technique aims to bridge the gap between different recording devices by transforming the spectrograms from one device to mimic those of another. At the heart of this technique is a mapping function, designed to convert the spectrogram data from a source device ($X_A$) into a form that statistically resembles the target device ($X_B$).</p>
 
 <div class="fake-img l-body">
   <p><figure>
@@ -262,9 +262,9 @@
   Spectrograms of the real/generated coughing sounds are presented in the top and bottom rows, respectively. The generated ones are produced by corresponding Microphone Conversion networks using a real input of iPhone 14.
 </div>
 
-<p>To achieve this transformation, we employed CycleGAN<d-cite key="zhu2017unpaired"></d-cite>, a groundbreaking framework in the realm of unsupervised image-to-image translation. CycleGAN is adept at learning mappings between two unpaired data domains, making it ideal for our purpose. Built on Generative Adversarial Networks (GANs), it involves two generators, $F$ and $G$, and two discriminators, $D_A$ and $D_B$. These components work in tandem: while the generators map data bijectively between the domains, the discriminators aim to distinguish real images from the converted ones.</p>
+<p>To achieve this, we employed CycleGAN<d-cite key="zhu2017unpaired"></d-cite>, a groundbreaking framework in the realm of unsupervised image-to-image translation. CycleGAN is adept at learning mappings between two unpaired data domains, making it ideal for our purpose. Built on Generative Adversarial Networks (GANs), it involves two generators, $F$ and $G$, and two discriminators, $D_A$ and $D_B$. These components work in tandem: while the generators map data bijectively between the domains, the discriminators aim to distinguish real images from the converted ones.</p>
 
-<p>The effectiveness of CycleGAN in our context lies in its dual-loss setup. The adversarial loss pushes the generators to produce outputs that are indistinguishable from the target domain, ensuring authenticity. Meanwhile, the cycle-consistency loss guarantees that the generated images, once reverse-mapped, closely resemble their original forms. This balance ensures that while the style of the spectrograms adapts to the target domain, their content remains intact and accurate.</p>
+<p>The effectiveness of CycleGAN in our context lies in its dual-loss setup. The adversarial loss pushes the generators to produce outputs that are indistinguishable from the target domain, ensuring authenticity. Meanwhile, the cycle-consistency loss guarantees that the generated images, once reverse-mapped, closely resemble their original forms. This balance ensures that while the style of the spectrograms adapts to the target domain, their content remains intact.</p>
 
 \[\mathcal{L}_{adv}(F, D_B, X_A, X_B) = \\
 \mathbb{E}_{X_A{\sim}p(x_a)}\left[{\log}(1-D_B(F(X_A)))\right] + \mathbb{E}_{X_B{\sim}p(x_b)}\left[{\log}D_B(X_B)\right]\]
@@ -272,7 +272,7 @@
 \[\mathcal{L}_{cycle}(F, G, X_A, X_B) = 
 \mathbb{E}_{X_A{\sim}p(x_a)}[||{G(F(X_A)) - X_A}||_{1}] + \mathbb{E}_{X_B{\sim}p(x_b)}[||{F(G(X_B)) - X_B}||_{1}]\]
 
-<p>For the network architecture, we adapted the CycleGAN implementation directly from the original author’s code. Our generator network consists of two upsampling and downsampling layers, along with nine residual blocks with instance normalization, with the omission of the hyperbolic tangent layer. The discriminator, a 16x16 PatchGAN with instance normalization, was chosen for its effectiveness in minimizing blurriness and ensuring better convergence in the output.</p>
+<p>For the network architecture, we adapted the CycleGAN implementation directly from the original author’s code. Our generator network consists of two up- and down-sampling layers, along with nine residual blocks with instance normalization, with the omission of the hyperbolic tangent layer. The discriminator, a 16x16 PatchGAN with instance normalization, was chosen for its effectiveness in minimizing blurriness and ensuring better convergence in the output.</p>
 
 <p>Through this approach, we were able to effectively ‘translate’ audio data across devices, preserving the integrity of the sound events while adapting to the unique acoustic characteristics of various recording devices.</p>
 
