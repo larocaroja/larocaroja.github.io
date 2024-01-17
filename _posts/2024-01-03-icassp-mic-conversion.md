@@ -21,6 +21,7 @@ toc:
   - name: Developing a New Technique and Dataset
   - name: Experiments and Results
 ---
+In this post, I am going to introduce our work accepted to [2024 IEEE ICASSP](https://2024.ieeeicassp.org). You can access the full paper [here](https://arxiv.org/pdf/2401.06913.pdf).
 
 ## Exploring the World of Sound Recognition
 ### Sound Event Classification and the Challenge of Device Variability
