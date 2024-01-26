@@ -32,6 +32,11 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Graduate Student Researcher
+        institution: Qualcomm institute
+        year: 2024 - 2024
+        description:
+          - Collaborated with Prof. Ramesh Rao and Dr. Justin Cho in the Qualcomm AI Development Project, mentoring undergraduate students in mastering fundamental AI concepts and developing AI research projects utilizing KNIME
     - title: AI Research Engineer
       institution: Deeply Inc.
       year: 2020 - 2023
