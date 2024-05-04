@@ -28,22 +28,23 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Machine Learning Engineer Intern
+      institution: Qualcomm Technologies, Inc.
+      year: 06/2024 - 09/2024
+      description:
+        - Will work in the area of speech analysis, coding, enhancement and neural speech synthesis, using digital signal processing with the latest advances in machine learning, LLMs, self-supervised learning and speech modeling.
     - title: Graduate Student Researcher
       institution: Qualcomm institute
-      year: 2024 - 2024
+      year: 01/2024 - 02/2024
       description:
-        - Mentor undergraduate students in mastering fundamental AI concepts and developing AI research projects, collaborating with Prof. Ramesh Rao and Dr. Justin Cho in the Qualcomm AI Development Project
+        - Mentor undergraduate students in mastering fundamental AI concepts and developing AI research projects, collaborating with Prof. Ramesh Rao and Dr. Justin Cho in the Qualcomm AI Development Project.
     - title: AI Research Engineer
       institution: Deeply Inc.
-      year: 2020 - 2023
+      year: 05/2020 - 07/2023
       description:
         - Published an academic paper at the esteemed <a href = "https://2024.ieeeicassp.org">ICASSP 2024</a>, a top-tier conference in signal processing and acoustics.
         - Developed sound event classification systems (e.g. <a href = "https://youtu.be/hVlrZweA8M4?si=QYkWpyopIRm6refs&t=72">Demo</a>), working with <a href = "https://www.linkedin.com/in/myeonghoon-ryu-319b1b12a/">Myeonghoon Ryu</a>.
-    - title: AI Research Engineer Intern
-      institution: Deeply Inc.
-      year: 2020 - 2020
-      description:
-        - Designed and executed data collection protocols for government-funded AI data construction projects [<a href = "https://github.com/deeplyinc/Nonverbal-Vocalization-Dataset">GitHub 1</a>, <a href = "https://github.com/deeplyinc/Parent-Child-Vocal-Interaction-Dataset">2</a>, <a href = "https://github.com/deeplyinc/Korean-Read-Speech-Corpus">3</a>]
+        - Designed and executed data collection protocols for government-funded AI data construction projects [<a href = "https://github.com/deeplyinc/Nonverbal-Vocalization-Dataset">GitHub 1</a>, <a href = "https://github.com/deeplyinc/Parent-Child-Vocal-Interaction-Dataset">2</a>, <a href = "https://github.com/deeplyinc/Korean-Read-Speech-Corpus">3</a>].
         # - title: Description 3.
         #   contents:
         #     - Sub-description 1.
